@@ -35,7 +35,8 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/', (req, res) => {
+// POST, PUT, DELETE declarations 
+router.post('/', async (req, res) => {
   // create a new category
 });
 
