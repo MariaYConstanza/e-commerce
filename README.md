@@ -16,4 +16,4 @@ As a developer creating a databse that can pull up back-end information that can
 N/A
 
 ## Licenses
-Copyright All Rights Reserved
+Copyright https://github.com/MariaYConstanza/e-commerce All Rights Reserved
