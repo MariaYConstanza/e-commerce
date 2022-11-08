@@ -19,7 +19,7 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Products
   try {
     
-    // return to this function to checkproof
+    // return to this function to checkproof (might be missing)
     const categoryData = await Category.findByPk(req.params.id, {
       include: [{ model: Category, through: Product, as: 'category_products' }]
     });
@@ -46,13 +46,14 @@ router.post('/', async (req, res) => {
   }
 });
 
-// return to this function for checkproof adn research update router
+// return to this function for checkproof and research update router declarations
 router.put('/:id', async (req, res) => {
   // update a category by its `id` value
   const categoryData = await Category.update(req.params.categoryId)
 
   if (!categoryData) return res.status(404).json({})
  
+  // look up functions
   category.name = req.body.name
   res.json(categoryData)
 });
