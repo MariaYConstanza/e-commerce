@@ -46,8 +46,15 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.put('/:id', (req, res) => {
+// return to this function for checkproof adn research update router
+router.put('/:id', async (req, res) => {
   // update a category by its `id` value
+  const categoryData = await Category.update(req.params.categoryId)
+
+  if (!categoryData) return res.status(404).json({})
+ 
+  category.name = req.body.name
+  res.json(categoryData)
 });
 
 router.delete('/:id', (req, res) => {
