@@ -1,7 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 
+// Connections of database to config
 const sequelize = require('../config/connection.js');
 
+// Set up data for tag database for the model
 class Tag extends Model {}
 
 Tag.init(
