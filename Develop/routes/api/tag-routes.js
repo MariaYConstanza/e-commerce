@@ -34,6 +34,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// POST, POST, DELETE declarations
 router.post('/', (req, res) => {
   // create a new tag
 });
